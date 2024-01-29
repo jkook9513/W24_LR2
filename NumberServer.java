@@ -15,8 +15,8 @@ class Handler implements URLHandler {
             //jpolitz: Hello
             if (url.getPath().contains("/add-message")) {
                 String[] parameter = url.getQuery().split("&"); //[0] = s=Hello, [1] = user=jpolitz
-                String[] message = parameter[0].split("=");
-                String[] user = parameter[1].split("=");
+                String[] message = parameter[0].split("="); //[0] = s, [1] = Hello
+                String[] user = parameter[1].split("="); //[0] = user, [1] = jpolitz
 
                 if(message[0].equals("s") && user[0].equals("user")) {
                     str += String.format("%s: %s \n", user[1], message[1]);
