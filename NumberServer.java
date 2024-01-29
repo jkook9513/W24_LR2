@@ -12,13 +12,14 @@ class Handler implements URLHandler {
             return str;
         } else {
             ///add-message?s=Hello&user=jpolitz
+            //jpolitz: Hello
             if (url.getPath().contains("/add-message")) {
-                String[] user = url.getQuery().split("&");
-                String name = user[user.length-1];
-                String[] message = url.getQuery().split("=");
-                if (message[0].equals("s")) {
-                    str += name + ": " + message[1] + "/n";
-                }
+                String[] parameter = url.getQuery().split("&"); //[0] = s=Hello, [1] = user=jpolitz
+                String[] message = parameter[0].split("=");
+                String[] user = parameter[1].split("=");
+
+                if(message[0]=s && user[0]=user) {
+                    str += user[user.length - 1] + ": " + message[message.length - 1];
                 
             }
             return "404 Not Found!";
