@@ -19,7 +19,7 @@ class Handler implements URLHandler {
                 String[] user = parameter[1].split("=");
 
                 if(message[0]=s && user[0]=user) {
-                    str += user[user.length - 1] + ": " + message[message.length - 1];
+                    str += String.format("%s: %s /n", user[user.length-1], message[nessage.length-1]);
                 
             }
             return "404 Not Found!";
