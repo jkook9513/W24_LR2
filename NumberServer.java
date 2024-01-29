@@ -5,20 +5,20 @@ class Handler implements URLHandler {
     // The one bit of state on the server: a number that will be manipulated by
     // various requests.
     int num = 0;
+    string str = "";
 
     public String handleRequest(URI url) {
         if (url.getPath().equals("/")) {
-            return String.format("Number: %d", num);
-        } else if (url.getPath().equals("/increment")) {
-            num += 1;
-            return String.format("Number incremented!");
+            return str;
         } else {
-            if (url.getPath().contains("/add")) {
-                String[] parameters = url.getQuery().split("=");
-                if (parameters[0].equals("count")) {
-                    num += Integer.parseInt(parameters[1]);
-                    return String.format("Number increased by %s! It's now %d", parameters[1], num);
+            if (url.getPath().contains("/add-message")) {
+                String[] user = url.getQuery().split("&");
+                String name = user[user.length-1];
+                String[] message = url.getQuery().split("=");
+                if (message[0].equals("s")) {
+                    str += name + ": " + message[1] + "/n";
                 }
+                
             }
             return "404 Not Found!";
         }
