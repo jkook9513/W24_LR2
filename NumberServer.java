@@ -18,7 +18,7 @@ class Handler implements URLHandler {
                 String[] message = parameter[0].split("=");
                 String[] user = parameter[1].split("=");
 
-                if(message[0]=s && user[0]=user) {
+                if(message[0].equals("s") && user[0].equals("user")) {
                     str += String.format("%s: %s \n", user[1], message[1]);
                 
             }
