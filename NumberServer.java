@@ -11,6 +11,7 @@ class Handler implements URLHandler {
         if (url.getPath().equals("/")) {
             return str;
         } else {
+            ///add-message?s=Hello&user=jpolitz
             if (url.getPath().contains("/add-message")) {
                 String[] user = url.getQuery().split("&");
                 String name = user[user.length-1];
