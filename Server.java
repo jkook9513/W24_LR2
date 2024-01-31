@@ -3,13 +3,7 @@
 // Examples from https://dzone.com/articles/simple-http-server-in-java were useful references
 
 import java.io.IOException;
-import java.io.OutputStream;
-import java.net.InetSocketAddress;
 import java.net.URI;
-
-import com.sun.net.httpserver.HttpExchange;
-import com.sun.net.httpserver.HttpHandler;
-import com.sun.net.httpserver.HttpServer;
 
 interface URLHandler {
     String handleRequest(URI url);
