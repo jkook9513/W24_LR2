@@ -10,18 +10,23 @@ class Handler implements URLHandler {
     public String handleRequest(URI url) {
         if (url.getPath().equals("/")) {
             return str;
-        } else if (url.getPath().contains("/add-message")) {
+        } else {
+            ///add-message?s=Hello&user=jpolitz
+            //jpolitz: Hello
+            if (url.getPath().contains("/add-message")) {
                 String[] parameter = url.getQuery().split("&"); //[0] = s=Hello, [1] = user=jpolitz
                 String[] message = parameter[0].split("="); //[0] = s, [1] = Hello
                 String[] user = parameter[1].split("="); //[0] = user, [1] = jpolitz
 
                 if(message[0].equals("s") && user[0].equals("user")) {
-                    str += String.format("%s: %s \n", user[1], message[1]);   
+                    str += String.format("%s: %s \n", user[1], message[1]);
+                
             }
-        } else {
             return "404 Not Found!";
+        }
     }
-    }
+}
+}
 
 class NumberServer {
     public static void main(String[] args) throws IOException {
