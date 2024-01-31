@@ -8,7 +8,7 @@ class Handler implements URLHandler {
     String str = "";
 
     public String handleRequest(URI url) {
-        if(url.getpath().equals("/")) {
+        if(url.getPath().equals("/")) {
             return str;
         } else {
             if(url.getPath().contains("/add-message")) {
