@@ -19,4 +19,8 @@
 * The values in the 'user' array are: user[] = {user, yash}
 * All four of the values change from this request. The 'parameter' array takes the input from the URL and seperates it into two parts: before and after the & (s=How+are+you and user=yash). Then the 'message' array takes the 0th value in the 'parameter' array (s=How+are+you) and splits into another two parts: before and after the =. Then the 'user' array takes the 1st value in the 'parameter' array (user=yash) and splits into another two parts: before and after the = (user and yash). For both the 'user' array and the 'message' array, the parts that are before the = will be the 0th value and the parts that are after the = will be the 1st value in their respective arrays. The 'str' string is then changed by adding onto a new line the 1st value from the 'user' array, followed by a comma and colon, followed by the 1st value from the 'message' array.
 
+![Image](LR2_P2_1)
+* The absolute path for both the private and public key are shown in the screenshot above. The absolute path for the private key is 'id_rsa'. The absolute path for the public key is 'id_rsa.pub'.
 
+![Image](LR2_P2_2)
+* 
