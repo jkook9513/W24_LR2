@@ -10,7 +10,7 @@ class Handler implements URLHandler {
     public String handleRequest(URI url) {
         if(url.getpath().equals("/")) {
             return str;
-        } else if {
+        } else {
             if(url.getPath().contains("/add-message")) {
                 String[] parameter = url.getQuery().split("&"); //[0] = s=Hello, [1] = user=jpolitz
                 String[] message = parameter[0].split("="); //[0] = s, [1] = Hello
@@ -18,14 +18,14 @@ class Handler implements URLHandler {
 
                 if(message[0].equals("s") && user[0].equals("user")) {
                     str += String.format("%s: %s \n", user[1], message[1]);
-            } else {
+            } 
+            }
                     return "404 Not Found!";
-                }
         }
-
+    }
     }
 
-class NumberServer {
+class ChatServer {
     public static void main(String[] args) throws IOException {
         if(args.length == 0){
             System.out.println("Missing port number! Try any number between 1024 to 49151");
