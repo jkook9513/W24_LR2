@@ -18,6 +18,7 @@ class Handler implements URLHandler {
 
                 if(message[0].equals("s") && user[0].equals("user")) {
                     str += String.format("%s: %s \n", user[1], message[1]);
+                    return str;
             } 
             }
                     return "404 Not Found!";
