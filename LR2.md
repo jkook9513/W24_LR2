@@ -23,4 +23,6 @@
 * The absolute path for both the private and public key are shown in the screenshot above. The absolute path for the private key is 'id_rsa'. The absolute path for the public key is 'id_rsa.pub'.
 
 ![Image](LR2_P2_2)
-* 
+* The screenshot above shows me logging into my ieng6 account without being asked for a password.
+
+* In weeks 2 and 3 I learned multiple new commands including `ssh`, `mkdir`, and `scp`. The `ssh` command is a protocol used to securely connect to a remote server or system. The `mkdir` command is a command used to create a new directory. The `scp` command copies files or directories between a local and a remote system, or between two remote systems. I also learned how to locally connect to a remote server.
